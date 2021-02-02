@@ -1,3 +1,4 @@
+[![View デモファイル：MATLABを使った予知保全・故障予測 on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://jp.mathworks.com/matlabcentral/fileexchange/58385-matlab)
 # 予知保全とは
 
 このファイルはWebセミナー「MATLABを使った予知保全・故障予測」で使用したファイルです。
