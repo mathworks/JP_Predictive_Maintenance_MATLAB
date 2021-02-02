@@ -1,5 +1,5 @@
-% EngineNum �Ŏw�肳���G���W���̃f�[�^�̐��ڂ��A�j���[�V�����ŕ`�悵�܂��B
-% Copyright 2015-2016 The MathWorks, Inc.
+% EngineNum で指定されるエンジンのデータの推移をアニメーションで描画します。
+% Copyright 2015-2021 The MathWorks, Inc.
 EngineNum = 39;
 r = find(smoothDataAll.Unit == EngineNum);
 figure; hold on

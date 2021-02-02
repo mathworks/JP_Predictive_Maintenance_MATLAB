@@ -1,7 +1,9 @@
-% Copyright 2016 The MathWorks, Inc.
-% ‰º‹LURL‚ÅŒöŠJ‚³‚ê‚Ä‚¢‚éƒf[ƒ^‚ğƒ_ƒEƒ“ƒ[ƒh‚µA
-% Data Set FD001‚ğƒGƒ“ƒWƒ“–ˆ‚Écsvƒtƒ@ƒCƒ‹‚Æ‚µ‚Ä•ª—£‚µ‚Äg—p‚µ‚Ü‚·B
+% Copyright 2016-2021 The MathWorks, Inc.
+% ä¸‹è¨˜URLã§å…¬é–‹ã•ã‚Œã¦ã„ã‚‹ãƒ‡ãƒ¼ã‚¿ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã€
+% Data Set FD001ã‚’ã‚¨ãƒ³ã‚¸ãƒ³æ¯ã«csvãƒ•ã‚¡ã‚¤ãƒ«ã¨ã—ã¦åˆ†é›¢ã—ã¦ä½¿ç”¨ã—ã¾ã™ã€‚
 % https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/
+% Turbofan Engine Degradation Simulation Data Set
+% https://ti.arc.nasa.gov/c/6/
 %
 %  Data Set: FD001
 % * Train trjectories: 100
@@ -13,10 +15,10 @@
 % in the Proceedings of the 1st International Conference on Prognostics and Health Management (PHM08), Denver CO, Oct 2008.
 
 
-% ¡‰ñg—p‚·‚éƒf[ƒ^ƒtƒ@ƒCƒ‹(CMAPSSData.zip)‚ğ‰º‹LURL‚©‚çƒ_ƒEƒ“ƒ[ƒh‚µA
-% OriginalDataSetƒtƒHƒ‹ƒ_‚É“WŠJ‚µ‚Ü‚·B
-% "Save As..." ƒ_ƒCƒAƒƒO‚ª—§‚¿ã‚ª‚è‚Ü‚·‚Ì‚ÅA
-% ".\originalDataSet" ‚É CMAPSSData.zip ‚ğ•Û‘¶‚µ‚Ä‚­‚¾‚³‚¢B
+% ä»Šå›ä½¿ç”¨ã™ã‚‹ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«(CMAPSSData.zip)ã‚’ä¸‹è¨˜URLã‹ã‚‰ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã€
+% OriginalDataSetãƒ•ã‚©ãƒ«ãƒ€ã«å±•é–‹ã—ã¾ã™ã€‚
+% "Save As..." ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ãŒç«‹ã¡ä¸ŠãŒã‚Šã¾ã™ã®ã§ã€
+% ".\originalDataSet" ã« CMAPSSData.zip ã‚’ä¿å­˜ã—ã¦ãã ã•ã„ã€‚
 originalFile = 'originalDataSet\CMAPSSData.zip';
 dataDir = 'originalDataSet';
 if ~exist(dataDir,'dir')
@@ -32,22 +34,22 @@ if ~exist(originalFile, 'file') % download only once
     pause
 end
 
-% ã‹LƒXƒeƒbƒv‚ª³í‚É‹@”\‚µ‚È‚¢ê‡‚Í Webƒuƒ‰ƒEƒU ‚©‚ç’¼Ú
+% ä¸Šè¨˜ã‚¹ãƒ†ãƒƒãƒ—ãŒæ­£å¸¸ã«æ©Ÿèƒ½ã—ãªã„å ´åˆã¯ Webãƒ–ãƒ©ã‚¦ã‚¶ ã‹ã‚‰ç›´æ¥
 % http://ti.arc.nasa.gov/c/6
-% ‚ÉƒAƒNƒZƒX‚µACMAPSSData.zip ‚ğƒ_ƒEƒ“ƒ[ƒh‚Å‚«‚Ü‚·B
-% –{ƒXƒNƒŠƒvƒg (prepareData.m) ‚ª‘¶İ‚·‚éƒtƒHƒ‹ƒ_‰»‚É
-% originalDataSet ‚Æ‚¢‚¤–¼‘O‚ÌƒtƒHƒ‹ƒ_‚ğì¬‚µA‚»‚Ì’†‚É CMAPSSData.zip ‚ğ•Û‘¶‚µ‚Ä‚­‚¾‚³‚¢B
+% ã«ã‚¢ã‚¯ã‚»ã‚¹ã—ã€CMAPSSData.zip ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã§ãã¾ã™ã€‚
+% æœ¬ã‚¹ã‚¯ãƒªãƒ—ãƒˆ (prepareData.m) ãŒå­˜åœ¨ã™ã‚‹ãƒ•ã‚©ãƒ«ãƒ€åŒ–ã«
+% originalDataSet ã¨ã„ã†åå‰ã®ãƒ•ã‚©ãƒ«ãƒ€ã‚’ä½œæˆã—ã€ãã®ä¸­ã« CMAPSSData.zip ã‚’ä¿å­˜ã—ã¦ãã ã•ã„ã€‚
 
-% ‚»‚ÌŒã‰º‹L‚ğÀs‚µ‚Ä‚­‚¾‚³‚¢B
+% ãã®å¾Œä¸‹è¨˜ã‚’å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚
 unzip(originalFile, dataDir);
 disp(['Data is unziped to the directory ', dataDir, '.']);
 
-%% train_FD001.txt‚Ìƒf[ƒ^‚ğAƒGƒ“ƒWƒ“‚²‚Æ‚É•ªŠ„‚µ‚Ü‚·B
+%% train_FD001.txtã®ãƒ‡ãƒ¼ã‚¿ã‚’ã€ã‚¨ãƒ³ã‚¸ãƒ³ã”ã¨ã«åˆ†å‰²ã—ã¾ã™ã€‚
 outputFolder = 'originalDataSet';
 File = fullfile(outputFolder,'train_FD001.txt');
 data = dlmread(File);
 
-% •Ï”–¼ì¬ 
+% å¤‰æ•°åä½œæˆ 
 varNames = {'Unit', 'Time', 'Setting1', 'Setting2', 'Setting3', 'FanInletTemp',...
     'LPCOutletTemp', 'HPCOutletTemp', 'LPTOutletTemp', 'FanInletPres', ...
     'BypassDuctPres', 'TotalHPCOutletPres', 'PhysFanSpeed', 'PhysCoreSpeed', ...
@@ -56,21 +58,21 @@ varNames = {'Unit', 'Time', 'Setting1', 'Setting2', 'Setting3', 'FanInletTemp',.
     'DemandFanSpeed', 'DemandCorrFanSpeed', 'HPTCoolantBleed', 'LPTCoolantBleed'};
 dataSet = array2table(data,'VariableNames',varNames);
 
-if ~exist('Data', 'dir') 
-    disp('Created a new folder "Data"');
-    mkdir('Data');
+if ~exist('dataSet', 'dir') 
+    disp('Created a new folder "dataSet"');
+    mkdir('dataSet');
 end
 
-% ƒGƒ“ƒWƒ“‚Ì”‚¾‚¯Acsv ‚Ö‚Ìo—Í‚ğŒJ‚è•Ô‚µ‚Ü‚·B
+% ã‚¨ãƒ³ã‚¸ãƒ³ã®æ•°ã ã‘ã€csv ã¸ã®å‡ºåŠ›ã‚’ç¹°ã‚Šè¿”ã—ã¾ã™ã€‚
 NofEngine = length(unique(dataSet.Unit));
 for ii = 1:NofEngine
     idx = dataSet.Unit == ii;
-    filename = ['Data\train_FD001_Unit_', num2str(ii), '.csv'];
+    filename = ['dataSet\train_FD001_Unit_', num2str(ii), '.csv'];
     writetable(dataSet(idx,:),filename);
 end
 
-%% ƒfƒ‚‚ÌŒã”¼‚Å“Ç‚İ‚Ş mat ƒtƒ@ƒCƒ‹‚Ì€”õ
-% iUnsupervisedLive_JP.mlx “à‚Å“K‰‚·‚éƒmƒCƒYœ‹‚Ìˆ—Àsj
+%% ãƒ‡ãƒ¢ã®å¾ŒåŠã§èª­ã¿è¾¼ã‚€ mat ãƒ•ã‚¡ã‚¤ãƒ«ã®æº–å‚™
+% ï¼ˆUnsupervisedLive_JP.mlx å†…ã§é©å¿œã™ã‚‹ãƒã‚¤ã‚ºé™¤å»ã®å‡¦ç†å®Ÿè¡Œï¼‰
 tmp = dataSet;
 dataSet = [];
 for ii = 1:NofEngine
@@ -79,20 +81,20 @@ for ii = 1:NofEngine
     dataSet = [dataSet;tempData(5:end,:)]; %#ok<AGROW>
 end
 
-% ŒÌá‚Ü‚Åc‚³‚ê‚½ƒtƒ‰ƒCƒg”
-% splitapply ‚Å ŠeUnit‚Ì‚»‚ê‚¼‚ê‚Ìƒf[ƒ^‚É‘Î‚µ‚Ä subtractMax ŠÖ”‚ğ“K—p‚µ‚Ü‚·B
+% æ•…éšœã¾ã§æ®‹ã•ã‚ŒãŸãƒ•ãƒ©ã‚¤ãƒˆæ•°
+% splitapply ã§ å„Unitã®ãã‚Œãã‚Œã®ãƒ‡ãƒ¼ã‚¿ã«å¯¾ã—ã¦ subtractMax é–¢æ•°ã‚’é©ç”¨ã—ã¾ã™ã€‚
 TimeToFail = splitapply(@(x) {subtractMax(x)},dataSet.Time,dataSet.Unit);
 dataSet.TimeToFail = cat(1,TimeToFail{:});
 
-% ã‹L‚Qs‚Æ“¯‚¶ˆ—‚Í for ƒ‹[ƒv‚ğg—p‚µ‚½‰º‹L‚Æ“¯‚¶ˆ—‚Å‚·B
-% dataSet.TimeToFail = zeros(height(dataSet),1);@
-% FailedTime = splitapply(@max,dataSet.Time,dataSet.Unit); % ŠeƒGƒ“ƒWƒ“‚ÌŒÌá“_‚Ìƒtƒ‰ƒCƒg”
+% ä¸Šè¨˜ï¼’è¡Œã¨åŒã˜å‡¦ç†ã¯ for ãƒ«ãƒ¼ãƒ—ã‚’ä½¿ç”¨ã—ãŸä¸‹è¨˜ã¨åŒã˜å‡¦ç†ã§ã™ã€‚
+% dataSet.TimeToFail = zeros(height(dataSet),1);ã€€
+% FailedTime = splitapply(@max,dataSet.Time,dataSet.Unit); % å„ã‚¨ãƒ³ã‚¸ãƒ³ã®æ•…éšœæ™‚ç‚¹ã®ãƒ•ãƒ©ã‚¤ãƒˆæ•°
 % for ii = 1:NofEngine
 %     idx = dataSet.Unit == ii;
 %     dataSet.TimeToFail(idx) = dataSet.Time(idx) - FailedTime(ii); 
 % end
 
-% ˆ—‚Ég—p‚·‚é•Ï”‚¾‚¯‚ğ fullDataset.mat ‚É•Û‘¶
+% å‡¦ç†ã«ä½¿ç”¨ã™ã‚‹å¤‰æ•°ã ã‘ã‚’ fullDataset.mat ã«ä¿å­˜
 variableNames = {'Unit' 'Time' 'LPCOutletTemp' 'HPCOutletTemp', 'LPTOutletTemp' 'TotalHPCOutletPres' 'PhysFanSpeed' ...
     'PhysCoreSpeed' 'StaticHPCOutletPres' 'FuelFlowRatio', 'CorrFanSpeed' 'CorrCoreSpeed' 'BypassRatio'...
     'BleedEnthalpy' 'HPTCoolantBleed' 'LPTCoolantBleed','TimeToFail'};
@@ -101,8 +103,8 @@ save('fullDataset.mat','fullDataset')
 
 disp('Data Set for case 1 (UnsupervisedLive_JP.mlx) demo is ready.');
 
-%% ClassificationLive_JP.mlx —p‚Ìƒf[ƒ^‚ğ—pˆÓ‚µ‚Ü‚·B
-% ‚±‚¿‚ç‚Å‚Í Time ‚ğŒÌá‚Ü‚Å‚Éc‚³‚ê‚½ƒtƒ‰ƒCƒg” TimeToFail ‚Å’u‚«Š·‚¦‚Ü‚·B
+%% ClassificationLive_JP.mlx ç”¨ã®ãƒ‡ãƒ¼ã‚¿ã‚’ç”¨æ„ã—ã¾ã™ã€‚
+% ã“ã¡ã‚‰ã§ã¯ Time ã‚’æ•…éšœã¾ã§ã«æ®‹ã•ã‚ŒãŸãƒ•ãƒ©ã‚¤ãƒˆæ•° TimeToFail ã§ç½®ãæ›ãˆã¾ã™ã€‚
 fullDataset.Time = fullDataset.TimeToFail;
 variableNames = {'Unit' 'Time' 'LPCOutletTemp' 'HPCOutletTemp', 'LPTOutletTemp' 'TotalHPCOutletPres' 'PhysFanSpeed' ...
     'PhysCoreSpeed' 'StaticHPCOutletPres' 'FuelFlowRatio', 'CorrFanSpeed' 'CorrCoreSpeed' 'BypassRatio'...
