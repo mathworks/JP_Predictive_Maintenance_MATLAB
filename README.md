@@ -14,6 +14,18 @@
 
 解説ビデオ：[MATLABを使った予知保全・故障予測](https://jp.mathworks.com/videos/predictive-maintenance-with-matlab-a-prognostics-case-study-121138.html)
 
+
+
+同じデータセットを使用した例題としては他に以下のものもあります。
+
+- [深層学習を使用した sequence-to-sequence 回帰](https://jp.mathworks.com/help/deeplearning/ug/sequence-to-sequence-regression-using-deep-learning.html)　（Deep Learning Toolbox を使用）
+- [類似度ベースの残存耐用期間推定](https://jp.mathworks.com/help/predmaint/ug/similarity-based-remaining-useful-life-estimation.html)（Predictive Maintenance Toolboxを使用）
+
+また、教師無し学習の例としてこちらの File Exchange のコードでは他の手法も紹介しています。
+
+- [MATLABによる予知保全のデモ](https://jp.mathworks.com/matlabcentral/fileexchange/86323-matlab)
+
+
 ## English description
 
 This zip file includes the demo files for the webinar "Predictive Maintenance with MATLAB" (in Japanese)
